@@ -1,17 +1,29 @@
 import 'package:flutter/material.dart';
+import 'screens/DisabilitiesTab.dart';
+import 'screens/MainScreen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Home Page')),
-      body: const Center(child: Text('Welcome to the Home Page!')),
+    // TODO: implement build
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
+      initialRoute: '/MainScreen',
+      routes: {
+        '/DisabilitiesTab': (context) => const DisabilitiesTab(),
+        '/MainScreen': (context) => const MainScreen(),
+      },
     );
   }
 }
