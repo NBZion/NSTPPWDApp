@@ -11,6 +11,7 @@ class MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Top Bar
       appBar: AppBar(
         toolbarHeight: 150,
         flexibleSpace: Container(
@@ -103,6 +104,7 @@ class MainScreenState extends State<MainScreen> {
         ),
       ),
 
+<<<<<<< HEAD
       body: Padding(
         padding: const EdgeInsetsGeometry.all(20),
 
@@ -201,6 +203,9 @@ class MainScreenState extends State<MainScreen> {
           ]
         )
       ),
+=======
+      // Main Body
+>>>>>>> e28bd42 (docs: In-Line comments)
     );
   }
 }
