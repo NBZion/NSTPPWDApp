@@ -102,6 +102,297 @@ class MainScreenState extends State<MainScreen> {
           ),
         ),
       ),
+
+
+
+      
+      
+      body: Padding(
+        padding: const EdgeInsetsGeometry.all(20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          spacing: 50,
+          children: [
+
+            // FIRST ROW OF BUTTONS
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 50,
+              children: [
+                
+                // BUTTON 1
+                SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: FilledButton(
+                    style: FilledButton.styleFrom(
+                      side: const BorderSide(
+                        color: Colors.black,
+                        width: 2,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      backgroundColor: Colors.white
+                    ),
+                    onPressed:() {
+                      print("Button 1 Pressed");
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 10,
+                        children: [
+                          // ICON BOX
+                          const DecoratedBox(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              color: Colors.lightBlue,
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            ),
+                            // ICON
+                            child: SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: Icon(Icons.accessibility, color: Colors.white, size: 16),
+                            ),
+                          ),
+
+                          // MAIN TITLE
+                          const Text(
+                            'Learn About Disabilities',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                          // SUBTITLE
+                          const Text(
+                            'Information about different disabilities',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 10,
+                            ),
+                        )
+
+                        ],
+                      ),
+                    )
+                  )
+                ),
+
+                // BUTTON 2
+                SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: FilledButton(
+                    style: FilledButton.styleFrom(
+                      side: const BorderSide(
+                        color: Colors.black,
+                        width: 2,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      backgroundColor: Colors.white
+                    ),
+                    onPressed:() {
+                      print("Button 1 Pressed");
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 10,
+                        children: [
+                          // ICON BOX
+                          const DecoratedBox(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              color: Colors.amberAccent,
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            ),
+                            // ICON
+                            child: SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: Icon(Icons.domain, color: Colors.white, size: 16),
+                            ),
+                          ),
+
+                          // MAIN TITLE
+                          const Text(
+                            'PWD Rights',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                          // SUBTITLE
+                          const Text(
+                            'Learn about rights and legal protections for PWD citizens of the Philippines',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 10,
+                            ),
+                        )
+
+                        ],
+                      ),
+                    )
+                  )
+                ),
+              ]
+            ),
+
+          // SECOND ROW OF BUTTONS
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 50,
+              children: [
+                // BUTTON 3
+                SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: FilledButton(
+                    style: FilledButton.styleFrom(
+                      side: const BorderSide(
+                        color: Colors.black,
+                        width: 2,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      backgroundColor: Colors.white,
+                    ),
+                    onPressed:() {
+                      print("Button 1 Pressed");
+                    },
+
+                    // CONTENTS OF BUTTON 3
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 10,
+                        children: [
+                          // ICON BOX
+                          const DecoratedBox(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              color: Colors.greenAccent,
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            ),
+                            // ICON
+                            child: SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: Icon(Icons.check, color: Colors.white, size: 16),
+                            ),
+                          ),
+
+                          // MAIN TITLE
+                          const Text(
+                            'PWD Rights',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                          // SUBTITLE
+                          const Text(
+                            'Learn about rights and legal protections for PWD citizens of the Philippines',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 10,
+                            ),
+                        )
+
+                        ],
+                      ),
+                    )
+                  ),
+                ),
+
+                  // BUTTON 4
+                  SizedBox(
+                    width: 150,
+                    height: 150,
+                    child: FilledButton(
+                      style: FilledButton.styleFrom(
+                        side: const BorderSide(
+                          color: Colors.black,
+                          width: 2,
+                        ),
+                        shape: RoundedRectangleBorder (
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        backgroundColor: Colors.white
+                      ),
+                      onPressed:() {
+                        print("Button 1 Pressed");
+                      },
+                      child: Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 10,
+                        children: [
+                          // ICON BOX
+                          const DecoratedBox(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              color: Colors.pinkAccent,
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            ),
+                            // ICON
+                            child: SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: Icon(Icons.house, color: Colors.white, size: 16),
+                            ),
+                          ),
+
+                          // MAIN TITLE
+                          const Text(
+                            'Learn About PWD Timbao',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                          // SUBTITLE
+                          const Text(
+                            'Information about PWD Timbao',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 10,
+                            ),
+                          )
+
+                        ],
+                      ),
+                    )
+                  ),
+                )
+
+
+              ]
+
+
+            ),
+          ]
+        ),
+      ),
     );
   }
 }
