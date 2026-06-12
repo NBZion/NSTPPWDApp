@@ -103,6 +103,77 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
           ),
         ),
       ),
+
+      body: Padding(
+        padding: const EdgeInsetsGeometry.all(20),
+        child: GridView.count(
+          crossAxisCount: 3,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
+          childAspectRatio: 0.9,
+          children: [
+            DisabilityCard(icon: Icons.forum_rounded, label: "Psychosocial"),
+            DisabilityCard(icon: Icons.accessible, label: "Orthopedic"),
+            DisabilityCard(icon: Icons.co_present, label: "Learning"),
+            DisabilityCard(icon: Icons.visibility, label: "Visual"),
+            DisabilityCard(icon: Icons.assist_walker, label: "Physical"),
+            DisabilityCard(icon: Icons.hearing, label: "Hearing"),
+            DisabilityCard(icon: Icons.record_voice_over, label: "Speech"),
+            DisabilityCard(icon: Icons.all_inclusive, label: "Cancer"),
+            DisabilityCard(icon: Icons.psychology, label: "Mental"),
+            DisabilityCard(
+              icon: Icons.translate,
+              label: "Speech and\nLanguage",
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DisabilityCard extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  // Add Navigation Variable Here
+  const DisabilityCard({
+    super.key,
+    required this.icon,
+    required this.label,
+    /*, Add navigation here */
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: () {
+          /* Navigation Logic */
+          print("Pressed");
+        },
+        child: Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(color: HexColor.fromHex("#F3E8FF")),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, size: 40, color: Colors.black),
+              Text(
+                label,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
