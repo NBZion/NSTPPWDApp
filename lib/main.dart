@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      initialRoute: '/MainScreen',
+      initialRoute: '/DisabilitiesTab',
       routes: {
         '/DisabilitiesTab': (context) => const DisabilitiesTab(),
         '/MainScreen': (context) => const MainScreen(),

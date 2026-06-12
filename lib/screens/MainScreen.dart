@@ -104,7 +104,6 @@ class MainScreenState extends State<MainScreen> {
         ),
       ),
 
-<<<<<<< HEAD
       body: Padding(
         padding: const EdgeInsetsGeometry.all(20),
 
@@ -114,16 +113,16 @@ class MainScreenState extends State<MainScreen> {
             // DATA
             Column(
               spacing: 10,
-              children:[
+              children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     DataDisplay(
                       title: 'Registered PWDs',
                       color: Colors.lightBlue,
-                      initdata: 320
-                    )
-                  ]
+                      initdata: 320,
+                    ),
+                  ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -132,25 +131,23 @@ class MainScreenState extends State<MainScreen> {
                     DataDisplay(
                       title: 'Caretakers',
                       color: Colors.redAccent,
-                      initdata: 25
+                      initdata: 25,
                     ),
                     DataDisplay(
                       title: 'Programs',
                       color: Colors.greenAccent,
-                      initdata: 25
+                      initdata: 25,
                     ),
                   ],
                 ),
-              ]
+              ],
             ),
-            
 
             // BUTTONS
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               spacing: 50,
               children: [
-
                 // FIRST ROW OF BUTTONS
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -169,13 +166,14 @@ class MainScreenState extends State<MainScreen> {
                       iconboxcolor: Colors.amber,
                       icon: Icons.folder,
                       title: 'Government Programs',
-                      subtitle: 'Access local and national programs for PWD citizens',
+                      subtitle:
+                          'Access local and national programs for PWD citizens',
                       subtitlespace: 2,
-                    )
-                  ]
+                    ),
+                  ],
                 ),
 
-              // SECOND ROW OF BUTTONS
+                // SECOND ROW OF BUTTONS
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   spacing: 50,
@@ -185,7 +183,8 @@ class MainScreenState extends State<MainScreen> {
                       iconboxcolor: Colors.greenAccent,
                       icon: Icons.check,
                       title: 'PWD Rights',
-                      subtitle: 'Learn about rights and legal protections for PWD citizens of the Philippines',
+                      subtitle:
+                          'Learn about rights and legal protections for PWD citizens of the Philippines',
                       subtitlespace: 12,
                     ),
                     // BUTTON 4
@@ -195,17 +194,14 @@ class MainScreenState extends State<MainScreen> {
                       title: 'Learn About PWD Timbao',
                       subtitle: 'Information about PWD Timbao',
                       subtitlespace: 2,
-                    )
-                  ]
+                    ),
+                  ],
                 ),
-              ]
+              ],
             ),
-          ]
-        )
+          ],
+        ),
       ),
-=======
-      // Main Body
->>>>>>> e28bd42 (docs: In-Line comments)
     );
   }
 }
@@ -217,7 +213,7 @@ class HomeOption extends StatelessWidget {
     required this.icon,
     required this.title,
     required this.subtitle,
-    required this.subtitlespace
+    required this.subtitlespace,
   });
 
   final Color iconboxcolor;
@@ -229,86 +225,75 @@ class HomeOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: 150,
-        height: 150,
-        child: FilledButton(
-          style: FilledButton.styleFrom(
-            side: const BorderSide(
-              color: Colors.black,
-              width: 2,
-            ),
-            shape: RoundedRectangleBorder (
-              borderRadius: BorderRadius.circular(20),
-            ),
-            backgroundColor: Colors.white
+      width: 150,
+      height: 150,
+      child: FilledButton(
+        style: FilledButton.styleFrom(
+          side: const BorderSide(color: Colors.black, width: 2),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
           ),
-          onPressed:() {
-            print("Button Pressed");
-          },
-          child: Padding(
-            padding: const EdgeInsets.only(top: 12, right: 4),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              spacing: 10,
-              children: [
+          backgroundColor: Colors.white,
+        ),
+        onPressed: () {
+          print("Button Pressed");
+        },
+        child: Padding(
+          padding: const EdgeInsets.only(top: 12, right: 4),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 10,
+            children: [
+              // ICON BOX
+              SizedBox(
+                width: 40,
+                height: 32,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    color: iconboxcolor,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
 
-                // ICON BOX
-                SizedBox(
-                  width: 40,
-                  height: 32,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      color: iconboxcolor,
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                    ),
-
-                    // ICON
-                    child: SizedBox(
-                      width: 32,
-                      height: 32,
-                      child: Icon(icon, color: Colors.white, size: 16),
-                    ),
+                  // ICON
+                  child: SizedBox(
+                    width: 32,
+                    height: 32,
+                    child: Icon(icon, color: Colors.white, size: 16),
                   ),
                 ),
-                
+              ),
 
-                // MAIN TITLE
-                Column(
-                  spacing: subtitlespace,
-                  children: [
-                    // TITLE
-                    Text(
-                      title,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+              // MAIN TITLE
+              Column(
+                spacing: subtitlespace,
+                children: [
+                  // TITLE
+                  Text(
+                    title,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
+                  ),
 
-                    // SUBTITLE
-                    Text(
-                      subtitle,
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 8,
-                      ),
-                    )
-                  ],
-                ),
-
-                
-
-              ],
-            ),
-          )
+                  // SUBTITLE
+                  Text(
+                    subtitle,
+                    style: TextStyle(color: Colors.grey, fontSize: 8),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
+      ),
     );
   }
 }
 
-class DataDisplay extends StatefulWidget{
+class DataDisplay extends StatefulWidget {
   const DataDisplay({
     super.key,
     required this.title,
@@ -342,29 +327,21 @@ class _CounterDataWidget extends State<DataDisplay> {
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: widget.color
+          color: widget.color,
         ),
         child: Center(
           child: Column(
             children: [
               Text(
                 (_counter + widget.initdata).toString(),
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold
-                )
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
 
-              Text(
-                widget.title,
-                style: TextStyle(
-                  fontSize: 12,
-                )
-              )
-            ]
-          )
-        )
-      )
+              Text(widget.title, style: TextStyle(fontSize: 12)),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
