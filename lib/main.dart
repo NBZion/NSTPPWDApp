@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pwdapp/screens/PWDRights.dart';
 import 'package:pwdapp/screens/PWDTimbao.dart';
 import 'package:pwdapp/screens/Settings.dart';
 import 'screens/DisabilitiesTab.dart';
@@ -21,12 +22,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      initialRoute: '/PWDTimbao',
+      initialRoute: '/MainScreen',
       routes: {
         '/DisabilitiesTab': (context) => const DisabilitiesTab(),
         '/MainScreen': (context) => const MainScreen(),
         '/Settings': (context) => const Settings(),
         '/PWDTimbao': (context) => const AboutUsPage(),
+        '/PWDRights': (context) => const PwdRightsPage(),
       },
     );
   }
