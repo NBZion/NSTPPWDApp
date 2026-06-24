@@ -4,6 +4,7 @@ import 'package:pwdapp/screens/PWDTimbao.dart';
 import 'package:pwdapp/screens/Settings.dart';
 import 'screens/DisabilitiesTab.dart';
 import 'screens/MainScreen.dart';
+import 'screens/SeparateDisability.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/Settings': (context) => const Settings(),
         '/PWDTimbao': (context) => const AboutUsPage(),
         '/PWDRights': (context) => const PwdRightsPage(),
+        '/SeparateDisability': (context) => const SeparateDisability(),
       },
     );
   }
