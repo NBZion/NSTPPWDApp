@@ -46,14 +46,16 @@ class SeparateDisabilityState extends State<SeparateDisability> {
                       Row(
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/MainScreen');
+                            },
                             icon: Icon(Icons.home_outlined),
                             color: Colors.white,
                           ),
 
                           IconButton(
                             onPressed: () {
-                              
+                              Navigator.pushReplacementNamed(context, '/Settings');
                             },
                             icon: Icon(
                               Icons.settings_outlined,

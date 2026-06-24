@@ -55,7 +55,9 @@ class _SettingsState extends State<Settings> {
                       Row(
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/MainScreen');
+                            },
                             icon: Icon(Icons.home_outlined),
                             color: Colors.white,
                           ),

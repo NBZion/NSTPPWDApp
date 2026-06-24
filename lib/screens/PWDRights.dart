@@ -119,13 +119,17 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                       Row(
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/MainScreen');
+                            },
                             icon: Icon(Icons.home_outlined),
                             color: Colors.white,
                           ),
 
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/Settings');
+                            },
                             icon: Icon(
                               Icons.settings_outlined,
                               color: Colors.white,

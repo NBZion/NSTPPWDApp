@@ -47,13 +47,17 @@ class MainScreenState extends State<MainScreen> {
                       Row(
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              
+                            },
                             icon: Icon(Icons.home_outlined),
                             color: Colors.white,
                           ),
 
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/Settings');
+                            },
                             icon: Icon(
                               Icons.settings_outlined,
                               color: Colors.white,
@@ -160,6 +164,7 @@ class MainScreenState extends State<MainScreen> {
                       title: 'Learn About Disabilities',
                       subtitle: 'Information about different distabilites',
                       subtitlespace: 2,
+                      route: '/DisabilitiesTab'
                     ),
                     // BUTTON 2
                     HomeOption(
@@ -169,6 +174,7 @@ class MainScreenState extends State<MainScreen> {
                       subtitle:
                           'Access local and national programs for PWD citizens',
                       subtitlespace: 2,
+                      route: '/PWDRights'
                     ),
                   ],
                 ),
@@ -186,6 +192,7 @@ class MainScreenState extends State<MainScreen> {
                       subtitle:
                           'Learn about rights and legal protections for PWD citizens of the Philippines',
                       subtitlespace: 12,
+                      route: '/PWDRights'
                     ),
                     // BUTTON 4
                     HomeOption(
@@ -194,6 +201,7 @@ class MainScreenState extends State<MainScreen> {
                       title: 'Learn About PWD Timbao',
                       subtitle: 'Information about PWD Timbao',
                       subtitlespace: 2,
+                      route: '/PWDTimbao'
                     ),
                   ],
                 ),
@@ -214,6 +222,7 @@ class HomeOption extends StatelessWidget {
     required this.title,
     required this.subtitle,
     required this.subtitlespace,
+    required this.route,
   });
 
   final Color iconboxcolor;
@@ -221,6 +230,7 @@ class HomeOption extends StatelessWidget {
   final String title;
   final String subtitle;
   final double subtitlespace;
+  final String route;
 
   @override
   Widget build(BuildContext context) {
@@ -237,6 +247,13 @@ class HomeOption extends StatelessWidget {
         ),
         onPressed: () {
           print("Button Pressed");
+          /*Navigator.push(
+            context,
+            MaterialPageRoute<void>(
+              builder: route
+            ),
+          )*/
+          Navigator.pushReplacementNamed(context, route);
         },
         child: Padding(
           padding: const EdgeInsets.only(top: 12, right: 4),
