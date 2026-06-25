@@ -47,16 +47,17 @@ class MainScreenState extends State<MainScreen> {
                       Row(
                         children: [
                           IconButton(
-                            onPressed: () {
-                              
-                            },
+                            onPressed: () {},
                             icon: Icon(Icons.home_outlined),
                             color: Colors.white,
                           ),
 
                           IconButton(
                             onPressed: () {
-                              Navigator.pushReplacementNamed(context, '/Settings');
+                              Navigator.pushReplacementNamed(
+                                context,
+                                '/Settings',
+                              );
                             },
                             icon: Icon(
                               Icons.settings_outlined,
@@ -164,7 +165,7 @@ class MainScreenState extends State<MainScreen> {
                       title: 'Learn About Disabilities',
                       subtitle: 'Information about different distabilites',
                       subtitlespace: 2,
-                      route: '/DisabilitiesTab'
+                      route: '/DisabilitiesTab',
                     ),
                     // BUTTON 2
                     HomeOption(
@@ -174,7 +175,7 @@ class MainScreenState extends State<MainScreen> {
                       subtitle:
                           'Access local and national programs for PWD citizens',
                       subtitlespace: 2,
-                      route: '/PWDRights'
+                      route: '/GovernmentTab',
                     ),
                   ],
                 ),
@@ -192,7 +193,7 @@ class MainScreenState extends State<MainScreen> {
                       subtitle:
                           'Learn about rights and legal protections for PWD citizens of the Philippines',
                       subtitlespace: 12,
-                      route: '/PWDRights'
+                      route: '/PWDRights',
                     ),
                     // BUTTON 4
                     HomeOption(
@@ -201,7 +202,7 @@ class MainScreenState extends State<MainScreen> {
                       title: 'Learn About PWD Timbao',
                       subtitle: 'Information about PWD Timbao',
                       subtitlespace: 2,
-                      route: '/PWDTimbao'
+                      route: '/PWDTimbao',
                     ),
                   ],
                 ),

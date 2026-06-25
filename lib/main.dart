@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pwdapp/screens/GovernmentTab.dart';
 import 'package:pwdapp/screens/PWDRights.dart';
 import 'package:pwdapp/screens/PWDTimbao.dart';
 import 'package:pwdapp/screens/Settings.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/PWDTimbao': (context) => const AboutUsPage(),
         '/PWDRights': (context) => const PwdRightsPage(),
         '/SeparateDisability': (context) => const SeparateDisability(),
+        '/GovernmentTab': (context) => const GovernmentTab(),
       },
     );
   }
