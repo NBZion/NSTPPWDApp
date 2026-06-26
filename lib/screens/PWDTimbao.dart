@@ -48,7 +48,7 @@ class AboutUsPage extends StatelessWidget {
                             onPressed: () {
                               Navigator.pushReplacementNamed(context, '/MainScreen');
                             },
-                            icon: Icon(Icons.home_outlined),
+                            icon: Icon(Icons.home_outlined, size: globalSettings.iconSizeMultiplier + 5,),
                             color: Colors.white,
                           ),
 
@@ -59,6 +59,7 @@ class AboutUsPage extends StatelessWidget {
                             icon: Icon(
                               Icons.settings_outlined,
                               color: Colors.white,
+                              size: globalSettings.iconSizeMultiplier + 5,
                             ),
                           ),
                         ],
@@ -83,7 +84,7 @@ class AboutUsPage extends StatelessWidget {
                   const SizedBox(height: 12),
 
                   // Search Bar
-                  Container(
+                  /*Container(
                     height: 32,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -98,7 +99,7 @@ class AboutUsPage extends StatelessWidget {
                         contentPadding: EdgeInsets.symmetric(vertical: 10),
                       ),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),
@@ -229,7 +230,6 @@ class AboutUsPage extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     decoration:
                         TextDecoration.underline, // Underlined hyperlink look
-                    color: Colors.black,
                     fontFamily: globalSettings.selectedFont
                   ),
                 ),
@@ -239,7 +239,7 @@ class AboutUsPage extends StatelessWidget {
                 description,
                 style: TextStyle(
                   fontSize: 13,
-                  color: Colors.grey[700],
+                  // color: Colors.blueGrey[700],
                   height: 1.3,
                   fontFamily: globalSettings.selectedFont
                 ),

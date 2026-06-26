@@ -91,7 +91,7 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
                   const SizedBox(height: 12),
 
                   // Search Bar
-                  Container(
+                  /*Container(
                     height: 32,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -106,7 +106,7 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
                         contentPadding: EdgeInsets.symmetric(vertical: 10),
                       ),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),

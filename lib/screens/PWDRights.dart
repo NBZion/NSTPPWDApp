@@ -127,7 +127,7 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                             onPressed: () {
                               Navigator.pushReplacementNamed(context, '/MainScreen');
                             },
-                            icon: Icon(Icons.home_outlined),
+                            icon: Icon(Icons.home_outlined, size: globalSettings.iconSizeMultiplier + 5,),
                             color: Colors.white,
                           ),
 
@@ -138,6 +138,7 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                             icon: Icon(
                               Icons.settings_outlined,
                               color: Colors.white,
+                              size: globalSettings.iconSizeMultiplier + 5,
                             ),
                           ),
                         ],
@@ -162,7 +163,7 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                   const SizedBox(height: 12),
 
                   // Search Bar
-                  Container(
+                  /*Container(
                     height: 32,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -177,7 +178,7 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                         contentPadding: EdgeInsets.symmetric(vertical: 10),
                       ),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),
@@ -259,7 +260,7 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
         children: [
           Text(
             title,
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, fontFamily: globalSettings.selectedFont),
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black, fontFamily: globalSettings.selectedFont),
           ),
           const SizedBox(height: 6),
           Text(

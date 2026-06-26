@@ -56,7 +56,7 @@ class GovernmentTabState extends State<GovernmentTab> {
                                 '/MainScreen',
                               );
                             },
-                            icon: Icon(Icons.home_outlined),
+                            icon: Icon(Icons.home_outlined, size: globalSettings.iconSizeMultiplier + 5,),
                             color: Colors.white,
                           ),
 
@@ -70,6 +70,7 @@ class GovernmentTabState extends State<GovernmentTab> {
                             icon: Icon(
                               Icons.settings_outlined,
                               color: Colors.white,
+                              size: globalSettings.iconSizeMultiplier + 5,
                             ),
                           ),
                         ],
@@ -94,7 +95,7 @@ class GovernmentTabState extends State<GovernmentTab> {
                   const SizedBox(height: 12),
 
                   // Search Bar
-                  Container(
+                  /*Container(
                     height: 32,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -109,7 +110,7 @@ class GovernmentTabState extends State<GovernmentTab> {
                         contentPadding: EdgeInsets.symmetric(vertical: 10),
                       ),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),
@@ -129,7 +130,6 @@ class GovernmentTabState extends State<GovernmentTab> {
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
                   fontFamily: globalSettings.selectedFont
                 ),
               ),
@@ -191,7 +191,6 @@ class GovernmentTabState extends State<GovernmentTab> {
                 description,
                 style: TextStyle(
                   fontSize: 13,
-                  color: Colors.grey[800],
                   height: 1.3,
                   fontFamily: globalSettings.selectedFont
                 ),

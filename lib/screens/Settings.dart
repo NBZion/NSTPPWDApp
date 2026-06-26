@@ -60,7 +60,7 @@ class _SettingsState extends State<Settings> {
                             onPressed: () {
                               Navigator.pushReplacementNamed(context, '/MainScreen');
                             },
-                            icon: Icon(Icons.home_outlined),
+                            icon: Icon(Icons.home_outlined, size: globalSettings.iconSizeMultiplier + 5,),
                             color: Colors.white,
                           ),
 
@@ -69,6 +69,7 @@ class _SettingsState extends State<Settings> {
                             icon: Icon(
                               Icons.settings_outlined,
                               color: Colors.white,
+                              size: globalSettings.iconSizeMultiplier + 5,
                             ),
                           ),
                         ],
@@ -97,7 +98,7 @@ class _SettingsState extends State<Settings> {
                   const SizedBox(height: 12),
 
                   // Search Bar
-                  Container(
+                  /*Container(
                     height: 32,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -112,7 +113,7 @@ class _SettingsState extends State<Settings> {
                         contentPadding: EdgeInsets.symmetric(vertical: 10),
                       ),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),
@@ -132,7 +133,7 @@ class _SettingsState extends State<Settings> {
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  // color: Colors.black,
                 ),
               ),
             ),
@@ -205,7 +206,7 @@ class _SettingsState extends State<Settings> {
             const SizedBox(height: 25),
 
             // 2. Accessibility Section
-            Text(
+            /*Text(
               "Accessibility",
               style: TextStyle(
                 fontSize: 22, 
@@ -232,7 +233,7 @@ class _SettingsState extends State<Settings> {
                   ),
                 ],
               ),
-            ),
+            ),*/
           ],
         ),
       ),

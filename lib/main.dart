@@ -17,7 +17,10 @@ import 'screens/SeparateDisabilities/Orthopedic.dart';
 import 'screens/SeparateDisabilities/Psychosocial.dart';
 import 'screens/SeparateDisabilities/Visual.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await globalSettings.loadSettings(); // load saved user data
   runApp(const MyApp());
 }
 
@@ -32,10 +35,22 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter',
+          title: 'PWD Wellness App',
+          themeMode: globalSettings.selectedDarkMode == 'On'
+              ? ThemeMode.dark
+              : ThemeMode.light,
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
             useMaterial3: true,
+            brightness: Brightness.light,
+          ),
+          darkTheme: ThemeData(
+            useMaterial3: true,
+            brightness: Brightness.dark,
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: globalSettings.themeColor,
+              brightness: Brightness.dark,
+            ),
           ),
           initialRoute: '/MainScreen',
           routes: {
