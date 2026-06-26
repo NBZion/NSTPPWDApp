@@ -17,37 +17,42 @@ class MentalPageScreen extends State<MentalPage> {
     return SeparateDisabilityState(
       children: [
         InformationLeftLogoRightSection(
-          header: 'Mental Disability',
+          header: 'Mental',
           information: 'Medical conditions that affect cognitive ability. This includes intellectual, mental, neurodevelopmental, etc.',
           icon: Icons.people,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 1: Down Syndrome',
+          header: 'Down Syndrome',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 0,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 2: Intellectual Disability',
+          header: 'Intellectual',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 3: Dementia',
+          header: 'Dementia',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 4: Brain Injuries',
+          header: 'Brain Injuries',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),

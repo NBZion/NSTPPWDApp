@@ -159,6 +159,7 @@ class InformationLeftLogoRightSection extends StatelessWidget {
       required this.header,
       required this.information,
       required this.icon,
+      required this.iconpadding,
       required this.size,
       required this.paddingvalue
     });
@@ -168,6 +169,7 @@ class InformationLeftLogoRightSection extends StatelessWidget {
     final IconData icon;
     final double size;
     final double paddingvalue;
+    final double iconpadding;
 
     @override
     Widget build(BuildContext context) {
@@ -183,6 +185,7 @@ class InformationLeftLogoRightSection extends StatelessWidget {
                 information: information,
                 rightside: 20,
                 leftside: 0,
+                iconpadding: iconpadding
               ),
               Padding(
                 padding: EdgeInsetsGeometry.only(right: paddingvalue),
@@ -205,6 +208,7 @@ class InformationRightLogoLeftSection extends StatelessWidget {
       required this.header,
       required this.information,
       required this.icon,
+      required this.iconpadding,
       required this.size,
       required this.paddingvalue
     });
@@ -214,6 +218,7 @@ class InformationRightLogoLeftSection extends StatelessWidget {
     final IconData icon;
     final double size;
     final double paddingvalue;
+    final double iconpadding;
 
     @override
     Widget build(BuildContext context) {
@@ -237,6 +242,7 @@ class InformationRightLogoLeftSection extends StatelessWidget {
                 information: information,
                 rightside: 0,
                 leftside: 20,
+                iconpadding: iconpadding,
               ),
             ],
           )
@@ -251,12 +257,14 @@ class WordSubSection extends StatelessWidget {
     required this.information,
     required this.leftside,
     required this.rightside,
+    required this.iconpadding
   });
 
   final String header;
   final String information;
   final double leftside;
   final double rightside;
+  final double iconpadding;
 
   @override
   Widget build(BuildContext context) {
@@ -299,13 +307,13 @@ class WordSubSection extends StatelessWidget {
                       child: Text(
                         header,
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           color: Colors.white
                         )
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsGeometry.only(top: 40, left: 10),
+                      padding: EdgeInsetsGeometry.only(top: 40, left: iconpadding),
                       child: Icon(Icons.chat_bubble)
                     ),
                   ],

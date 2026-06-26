@@ -17,43 +17,49 @@ class OrthopedicPageScreen extends State<OrthopedicPage> {
     return SeparateDisabilityState(
       children: [
         InformationLeftLogoRightSection(
-          header: 'Orthopedic Disabilities',
+          header: 'Orthopedic',
           information: 'Physical conditions that affect overall movement, mobility, and physical function of the patient.',
+          iconpadding: 5,
           icon: Icons.people,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 1: Amputation',
+          header: 'Amputation',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 2: Cerebral Palsy',
+          header: 'Cerebral Palsy',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 3: Paraplegia / quadriplegia',
+          header: 'Paraplegia',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 4: Polio',
+          header: 'Polio',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 5: Spina bifida',
+          header: 'Spina bifida',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40

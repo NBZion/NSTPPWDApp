@@ -17,30 +17,34 @@ class LearningPageScreen extends State<LearningPage> {
     return SeparateDisabilityState(
       children: [
         InformationLeftLogoRightSection(
-          header: 'Learning Disability',
+          header: 'Learning',
           information: 'Mental conditions where the brain has difficulties in processing or comprehending information.',
           icon: Icons.people,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 1: Dyslexia',
+          header: 'Dyslexia',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 2: Dysgraphia',
+          header: 'Dysgraphia',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 3: Difficulty in Math or Comprehension',
+          header: 'Comprehension',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),

@@ -17,43 +17,49 @@ class PsychosocialPageScreen extends State<PsychosocialPage> {
     return SeparateDisabilityState(
       children: [
         InformationLeftLogoRightSection(
-          header: 'Psychosocial Disabilities',
+          header: 'Psychosocial',
           information: 'Mental or behavioral conditions that challenge individuals in daily function and social interaction.',
+          iconpadding: 0,
           icon: Icons.people,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 1: Depression',
+          header: 'Depression',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 2: Bipolar Disorder',
+          header: 'Bipolar',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 3: Anxiety disorders',
+          header: 'Anxiety',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 4: Schizophrenia',
+          header: 'Schizophrenia',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 0,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 5: Attention-Deficit/Hyperactivity Disorder (ADHD)',
+          header: 'ADHD',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          iconpadding: 5,
           icon: Icons.check_box,
           size: 120,
           paddingvalue: 40

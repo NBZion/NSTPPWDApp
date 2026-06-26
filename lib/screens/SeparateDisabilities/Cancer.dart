@@ -20,6 +20,7 @@ class CancerPageState extends State<CancerPage> {
           header: 'Cancer',
           information: 'A general term for diseases affecting any part of the body, typically through the fast creation of abnormal cells that begin to invade other parts of the body',
           icon: Icons.people,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
@@ -27,6 +28,7 @@ class CancerPageState extends State<CancerPage> {
           header: 'Causes',
           information: 'Certain habits such as tobacco and/or alcohol consumption, unhealthy diets, and lack of physical activity can increase risk for cancer. Other chronic diseases can also increase the risk for cancer, such as Hepatitis and HPV.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
@@ -34,6 +36,7 @@ class CancerPageState extends State<CancerPage> {
           header: 'Early Detection',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),

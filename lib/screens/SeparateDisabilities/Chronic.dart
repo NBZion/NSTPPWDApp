@@ -20,20 +20,23 @@ class ChronicPageState extends State<ChronicPage> {
           header: 'Chronic Illnesses',
           information: 'Serious illnesses or long-term diseases that affects and limits daily activities',
           icon: Icons.people,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 1: Severe Heart Diseases',
+          header: 'Severe Heart Diseases',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 2: Diabetes Complications',
+          header: 'Diabetes Complications',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),

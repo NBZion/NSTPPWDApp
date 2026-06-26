@@ -17,30 +17,34 @@ class CommunicationPageScreen extends State<CommunicationPage> {
     return SeparateDisabilityState(
       children: [
         InformationLeftLogoRightSection(
-          header: 'Communication Disability',
+          header: 'Communication',
           information: 'Conditions that affect hearing, speech, or language involving difficulty',
           icon: Icons.people,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 1: Deafness',
+          header: 'Deafness',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Disorder 2: IHearing Loss',
+          header: 'Hearing Loss',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Disorder 3: Speech Disorder',
+          header: 'Speech Disorder',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           icon: Icons.check_box,
+          iconpadding: 0,
           size: 120,
           paddingvalue: 40
         ),

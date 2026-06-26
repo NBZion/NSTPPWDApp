@@ -124,7 +124,7 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
             DisabilityCard(icon: Icons.hearing, label: "Hearing", route: '/'),
             DisabilityCard(icon: Icons.record_voice_over, label: "Speech", route: '/CommunicationPage'),
             DisabilityCard(icon: Icons.all_inclusive, label: "Cancer", route: '/CancerPage'),
-            DisabilityCard(icon: Icons.psychology, label: "Mental", route: 'MentalPage'),
+            DisabilityCard(icon: Icons.psychology, label: "Mental", route: '/MentalPage'),
             DisabilityCard(
               icon: Icons.translate,
               label: "Speech and\nLanguage",
