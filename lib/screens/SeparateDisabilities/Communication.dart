@@ -26,23 +26,15 @@ class CommunicationPageScreen extends State<CommunicationPage> {
         ),
         InformationRightLogoLeftSection(
           header: 'Deafness',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          information: 'This is a condition where a person cannot hear at all or has very little hearing ability, even with sound or amplification. This also refers to a reduced ability to hear sounds, which can be mild, moderate, severe, or profound.',
           icon: Icons.check_box,
           iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Hearing Loss',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
-          icon: Icons.check_box,
-          iconpadding: 5,
-          size: 120,
-          paddingvalue: 40
-        ),
-        InformationRightLogoLeftSection(
           header: 'Speech Disorder',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          information: 'These are conditions that affect a person’s ability to speak clearly or fluently. A person may have difficulty forming sounds, pronouncing words, or speaking in a way that others can easily understand.',
           icon: Icons.check_box,
           iconpadding: 0,
           size: 120,

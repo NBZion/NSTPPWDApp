@@ -17,7 +17,7 @@ class ChronicPageState extends State<ChronicPage> {
     return SeparateDisabilityState(
       children: [
         InformationLeftLogoRightSection(
-          header: 'Chronic Illnesses',
+          header: 'Chronic',
           information: 'Serious illnesses or long-term diseases that affects and limits daily activities',
           icon: Icons.people,
           iconpadding: 5,
@@ -25,16 +25,16 @@ class ChronicPageState extends State<ChronicPage> {
           paddingvalue: 40
         ),
         InformationRightLogoLeftSection(
-          header: 'Severe Heart Diseases',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          header: 'Heart Diseases',
+          information: 'A serious condition where the heart cannot pump blood properly, causing symptoms like chest pain, shortness of breath, fatigue, and difficulty doing physical activities.',
           icon: Icons.check_box,
           iconpadding: 5,
           size: 120,
           paddingvalue: 40
         ),
         InformationLeftLogoRightSection(
-          header: 'Diabetes Complications',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          header: 'Diabetes',
+          information: 'Long-term problems from uncontrolled diabetes, including nerve damage (numbness or pain), vision loss, kidney damage, and slow-healing wounds that can affect daily life.',
           icon: Icons.check_box,
           iconpadding: 5,
           size: 120,

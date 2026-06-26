@@ -26,7 +26,7 @@ class LearningPageScreen extends State<LearningPage> {
         ),
         InformationRightLogoLeftSection(
           header: 'Dyslexia',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          information: 'Characterized by problems in word recognition, resulting in reading comprehension impairments and orthographic processing',
           icon: Icons.check_box,
           iconpadding: 5,
           size: 120,
@@ -34,7 +34,7 @@ class LearningPageScreen extends State<LearningPage> {
         ),
         InformationLeftLogoRightSection(
           header: 'Dysgraphia',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          information: 'Involves difficulty in converting thoughts into written form regardless of amount of exposure to education.',
           icon: Icons.check_box,
           iconpadding: 5,
           size: 120,
@@ -42,7 +42,7 @@ class LearningPageScreen extends State<LearningPage> {
         ),
         InformationRightLogoLeftSection(
           header: 'Comprehension',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          information: 'People with learning disabilities may have difficulty with comprehension and mathematics, which are very much related to each other, ',
           icon: Icons.check_box,
           iconpadding: 5,
           size: 120,

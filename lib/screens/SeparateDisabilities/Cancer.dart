@@ -34,7 +34,7 @@ class CancerPageState extends State<CancerPage> {
         ),
         InformationLeftLogoRightSection(
           header: 'Early Detection',
-          information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
+          information: 'To detect cancer early, it is important to be aware of symptoms of different forms of cancer and have access to clinical evaluation and diagnostic services. Screening can also help find specific cancers, but is not effective for all types of cancer.',
           icon: Icons.check_box,
           iconpadding: 5,
           size: 120,
