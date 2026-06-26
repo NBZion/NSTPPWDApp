@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pwdapp/utils/color_extensions.dart';
+//import 'package:pwdapp/utils/color_extensions.dart';
+import '../utils/app_settings.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -24,7 +25,7 @@ class _SettingsState extends State<Settings> {
         toolbarHeight: 150,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: HexColor.fromHex("#3355FF"),
+            color: globalSettings.themeColor,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -42,12 +43,13 @@ class _SettingsState extends State<Settings> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "PWD Wellness App",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          fontFamily: globalSettings.selectedFont
                         ),
                       ),
 
@@ -82,9 +84,13 @@ class _SettingsState extends State<Settings> {
                         color: Colors.red,
                         size: 32,
                       ),
-                      const Text(
+                      Text(
                         "Barangay Timbao",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: TextStyle(
+                          color: Colors.white, 
+                          fontSize: 18,
+                          fontFamily: globalSettings.selectedFont
+                        ),
                       ),
                     ],
                   ),
@@ -133,15 +139,19 @@ class _SettingsState extends State<Settings> {
             const SizedBox(height: 20),
 
             // 1. Customization Section
-            const Text(
+            Text(
               "Customization",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 22, 
+                fontWeight: FontWeight.bold,
+                fontFamily: globalSettings.selectedFont
+              ),
             ),
             const SizedBox(height: 10),
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF3355FF), // Matching blue card background
+                color: globalSettings.themeColor, //const Color(0xFF3355FF), // Matching blue card background
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
@@ -150,8 +160,10 @@ class _SettingsState extends State<Settings> {
                     "System Color",
                     selectedColor,
                     ['Vivid Blue', 'Soft Red', 'Deep Emerald'],
-                    (val) {
-                      setState(() => selectedColor = val!);
+                    (val) 
+                    {
+                      globalSettings.updateColor(val!);
+                      setState(() => selectedColor = val); //
                     },
                   ),
                   const Divider(color: Colors.white30, height: 20),
@@ -159,17 +171,21 @@ class _SettingsState extends State<Settings> {
                     "System Font",
                     selectedFont,
                     ['Bricolage', 'Roboto', 'Open Sans'],
-                    (val) {
-                      setState(() => selectedFont = val!);
-                    },
+                    (val)
+                    {
+                      globalSettings.updateFont(val!);
+                      setState(() => selectedFont = val); 
+                    }, 
                   ),
                   const Divider(color: Colors.white30, height: 20),
                   _buildSettingRow(
                     "Icon Size",
                     selectedIconSize,
                     ['Small', 'Medium', 'Large'],
-                    (val) {
-                      setState(() => selectedIconSize = val!);
+                    (val) 
+                    {
+                      globalSettings.updateIconSize(val!);
+                      setState(() => selectedIconSize = val);
                     },
                   ),
                   const Divider(color: Colors.white30, height: 20),
@@ -177,8 +193,10 @@ class _SettingsState extends State<Settings> {
                     "Dark Mode",
                     selectedDarkMode,
                     ['On', 'Off'],
-                    (val) {
-                      setState(() => selectedDarkMode = val!);
+                    (val)  
+                    {
+                      globalSettings.updateDarkMode(val!);
+                      setState(() => selectedDarkMode = val);
                     },
                   ),
                 ],
@@ -187,15 +205,19 @@ class _SettingsState extends State<Settings> {
             const SizedBox(height: 25),
 
             // 2. Accessibility Section
-            const Text(
+            Text(
               "Accessibility",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 22, 
+                fontWeight: FontWeight.bold,
+                fontFamily: globalSettings.selectedFont
+              ),
             ),
             const SizedBox(height: 10),
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF3355FF),
+                color: globalSettings.themeColor, //const Color(0xFF3355FF),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
@@ -229,10 +251,11 @@ class _SettingsState extends State<Settings> {
       children: [
         Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.w400,
+            fontFamily: globalSettings.selectedFont
           ),
         ),
         Container(

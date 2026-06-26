@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pwdapp/utils/color_extensions.dart';
+import 'package:pwdapp/utils/app_settings.dart';
+// import 'package:pwdapp/utils/color_extensions.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -16,7 +17,7 @@ class MainScreenState extends State<MainScreen> {
         toolbarHeight: 150,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: HexColor.fromHex("#3355FF"),
+            color: globalSettings.themeColor,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -34,12 +35,13 @@ class MainScreenState extends State<MainScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "PWD Wellness App",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          fontFamily: globalSettings.selectedFont
                         ),
                       ),
 
@@ -77,9 +79,13 @@ class MainScreenState extends State<MainScreen> {
                         color: Colors.red,
                         size: 32,
                       ),
-                      const Text(
+                      Text(
                         "Barangay Timbao",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: TextStyle(
+                          color: Colors.white, 
+                          fontSize: 18,
+                          fontFamily: globalSettings.selectedFont
+                        ),
                       ),
                     ],
                   ),
@@ -293,13 +299,18 @@ class HomeOption extends StatelessWidget {
                       color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
+                      fontFamily: globalSettings.selectedFont
                     ),
                   ),
 
                   // SUBTITLE
                   Text(
                     subtitle,
-                    style: TextStyle(color: Colors.grey, fontSize: 8),
+                    style: TextStyle(
+                      color: Colors.grey, 
+                      fontSize: 8,
+                      fontFamily: globalSettings.selectedFont
+                    ),
                   ),
                 ],
               ),
@@ -352,7 +363,11 @@ class _CounterDataWidget extends State<DataDisplay> {
             children: [
               Text(
                 (_counter + widget.initdata).toString(),
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 30, 
+                  fontWeight: FontWeight.bold,
+                  fontFamily: globalSettings.selectedFont
+                ),
               ),
 
               Text(widget.title, style: TextStyle(fontSize: 12)),

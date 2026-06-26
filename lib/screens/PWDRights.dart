@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pwdapp/utils/color_extensions.dart';
+//import 'package:pwdapp/utils/color_extensions.dart';
+import 'package:pwdapp/utils/app_settings.dart';
 
 class PwdRightsPage extends StatefulWidget {
   const PwdRightsPage({super.key});
@@ -38,10 +39,11 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                     children: [
                       Text(
                         title,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
+                          fontFamily: globalSettings.selectedFont
                         ),
                       ),
                       IconButton(
@@ -54,11 +56,12 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                   // Main Highlighted Text
                   Text(
                     mainText,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       decoration: TextDecoration.underline,
                       height: 1.4,
+                      fontFamily: globalSettings.selectedFont,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -69,6 +72,7 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                       fontSize: 14,
                       color: Colors.grey[800],
                       height: 1.4,
+                      fontFamily: globalSettings.selectedFont,
                     ),
                   ),
                 ],
@@ -88,7 +92,7 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
         toolbarHeight: 150,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: HexColor.fromHex("#3355FF"),
+            color: globalSettings.themeColor,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -106,12 +110,13 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "PWD Wellness App",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          fontFamily: globalSettings.selectedFont
                         ),
                       ),
 
@@ -186,10 +191,10 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Screen Header Title
-            const Center(
+            Center(
               child: Text(
                 "Laws Protecting PWDs",
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, fontFamily: globalSettings.selectedFont),
               ),
             ),
             const SizedBox(height: 25),
@@ -254,15 +259,16 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
         children: [
           Text(
             title,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, fontFamily: globalSettings.selectedFont),
           ),
           const SizedBox(height: 6),
           Text(
             subtitle,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w600,
               color: Colors.black87,
+              fontFamily: globalSettings.selectedFont
             ),
           ),
           const SizedBox(height: 16),
@@ -272,11 +278,12 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
             child: OutlinedButton.icon(
               onPressed: onReadTap,
               icon: const Icon(Icons.stars, size: 18, color: Colors.black87),
-              label: const Text(
+              label: Text(
                 "Read",
                 style: TextStyle(
                   color: Colors.black87,
                   fontWeight: FontWeight.bold,
+                  fontFamily: globalSettings.selectedFont
                 ),
               ),
               style: OutlinedButton.styleFrom(

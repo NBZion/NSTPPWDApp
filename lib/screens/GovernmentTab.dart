@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pwdapp/utils/color_extensions.dart';
+// import 'package:pwdapp/utils/color_extensions.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:pwdapp/utils/app_settings.dart';
 
 class GovernmentTab extends StatefulWidget {
   const GovernmentTab({super.key});
@@ -17,7 +18,7 @@ class GovernmentTabState extends State<GovernmentTab> {
         toolbarHeight: 150,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: HexColor.fromHex("#3355FF"),
+            color: globalSettings.themeColor,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -35,12 +36,13 @@ class GovernmentTabState extends State<GovernmentTab> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "PWD Wellness App",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          fontFamily: globalSettings.selectedFont
                         ),
                       ),
 
@@ -83,9 +85,9 @@ class GovernmentTabState extends State<GovernmentTab> {
                         color: Colors.red,
                         size: 32,
                       ),
-                      const Text(
+                      Text(
                         "Barangay Timbao",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: globalSettings.selectedFont),
                       ),
                     ],
                   ),
@@ -121,13 +123,14 @@ class GovernmentTabState extends State<GovernmentTab> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Center(
+            Center(
               child: Text(
                 "Government Program",
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
+                  fontFamily: globalSettings.selectedFont
                 ),
               ),
             ),
@@ -172,12 +175,13 @@ class GovernmentTabState extends State<GovernmentTab> {
                 onTap: () => _openBrowserLink(url),
                 child: Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     decoration: TextDecoration.underline,
                     color: Colors
                         .blue, // Changed to blue to look more like a clickable web link
                     height: 1.2,
+                    fontFamily: globalSettings.selectedFont
                   ),
                 ),
               ),
@@ -189,6 +193,7 @@ class GovernmentTabState extends State<GovernmentTab> {
                   fontSize: 13,
                   color: Colors.grey[800],
                   height: 1.3,
+                  fontFamily: globalSettings.selectedFont
                 ),
               ),
             ],
@@ -200,7 +205,7 @@ class GovernmentTabState extends State<GovernmentTab> {
           width: 70,
           height: 70,
           decoration: BoxDecoration(
-            color: const Color(0xFF0088FF),
+            color: globalSettings.themeColor, //const Color(0xFF0088FF),
             borderRadius: BorderRadius.circular(8),
           ),
           child: const Center(

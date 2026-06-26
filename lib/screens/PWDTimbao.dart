@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pwdapp/utils/color_extensions.dart';
+//import 'package:pwdapp/utils/color_extensions.dart';
+import 'package:pwdapp/utils/app_settings.dart';
 
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({super.key});
@@ -12,7 +13,7 @@ class AboutUsPage extends StatelessWidget {
         toolbarHeight: 150,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: HexColor.fromHex("#3355FF"),
+            color: globalSettings.themeColor,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -30,12 +31,13 @@ class AboutUsPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "PWD Wellness App",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          fontFamily: globalSettings.selectedFont
                         ),
                       ),
 
@@ -72,9 +74,9 @@ class AboutUsPage extends StatelessWidget {
                         color: Colors.red,
                         size: 32,
                       ),
-                      const Text(
+                      Text(
                         "Barangay Timbao",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: globalSettings.selectedFont),
                       ),
                     ],
                   ),
@@ -110,10 +112,10 @@ class AboutUsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // 1. Section: About Us Title
-            const Center(
+            Center(
               child: Text(
                 "About Us",
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, fontFamily: globalSettings.selectedFont),
               ),
             ),
             const SizedBox(height: 20),
@@ -134,10 +136,10 @@ class AboutUsPage extends StatelessWidget {
                 ),
                 const SizedBox(width: 16),
                 // Text side that fills up the remaining width
-                const Expanded(
+                Expanded(
                   child: Text(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id sem vitae velit facilisis elementum. Pellentesque commodo turpis sed magna fringilla semper. Aliquam libero purus, feugiat non suscipit ut.",
-                    style: TextStyle(fontSize: 14, height: 1.4),
+                    style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
                   ),
                 ),
               ],
@@ -150,22 +152,22 @@ class AboutUsPage extends StatelessWidget {
               style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(
+            Text(
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id sem vitae velit facilisis elementum. Pellentesque commodo turpis sed magna fringilla semper. Aliquam libero purus, feugiat non suscipit ut.",
-              style: TextStyle(fontSize: 14, height: 1.4),
+              style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
             ),
             const SizedBox(height: 16),
-            const Text(
+            Text(
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id sem vitae velit facilisis elementum. Pellentesque commodo turpis sed magna fringilla semper. Aliquam libero purus, feugiat non suscipit ut,",
-              style: TextStyle(fontSize: 14, height: 1.4),
+              style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
             ),
             const SizedBox(height: 30),
 
             // 4. Section: Programs Title
-            const Center(
+            Center(
               child: Text(
                 "Programs",
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, fontFamily: globalSettings.selectedFont),
               ),
             ),
             const SizedBox(height: 20),
@@ -222,12 +224,13 @@ class AboutUsPage extends StatelessWidget {
                 onTap: onTap,
                 child: Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     decoration:
                         TextDecoration.underline, // Underlined hyperlink look
                     color: Colors.black,
+                    fontFamily: globalSettings.selectedFont
                   ),
                 ),
               ),
@@ -238,6 +241,7 @@ class AboutUsPage extends StatelessWidget {
                   fontSize: 13,
                   color: Colors.grey[700],
                   height: 1.3,
+                  fontFamily: globalSettings.selectedFont
                 ),
               ),
             ],

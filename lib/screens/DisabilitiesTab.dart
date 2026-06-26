@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pwdapp/utils/color_extensions.dart';
+import '../utils/app_settings.dart';
 
 class DisabilitiesTab extends StatefulWidget {
   const DisabilitiesTab({super.key});
@@ -16,7 +17,7 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
         toolbarHeight: 150,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: HexColor.fromHex("#3355FF"),
+            color: globalSettings.themeColor,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -34,12 +35,13 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "PWD Wellness App",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          fontFamily: globalSettings.selectedFont
                         ),
                       ),
 
@@ -76,9 +78,9 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
                         color: Colors.red,
                         size: 32,
                       ),
-                      const Text(
+                      Text(
                         "Barangay Timbao",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: globalSettings.selectedFont),
                       ),
                     ],
                   ),
@@ -177,6 +179,7 @@ class DisabilityCard extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
+                  fontFamily: globalSettings.selectedFont
                 ),
               ),
             ],

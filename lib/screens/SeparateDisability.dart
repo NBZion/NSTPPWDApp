@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pwdapp/utils/color_extensions.dart';
+// import 'package:pwdapp/utils/color_extensions.dart';
+import '../utils/app_settings.dart';
 
 
 class SeparateDisabilityState extends StatelessWidget {
@@ -20,7 +21,7 @@ class SeparateDisabilityState extends StatelessWidget {
         toolbarHeight: 150,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: HexColor.fromHex("#3355FF"),
+            color: globalSettings.themeColor,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -38,12 +39,13 @@ class SeparateDisabilityState extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "PWD Wellness App",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          fontFamily: globalSettings.selectedFont
                         ),
                       ),
 
@@ -80,9 +82,9 @@ class SeparateDisabilityState extends StatelessWidget {
                         color: Colors.red,
                         size: 32,
                       ),
-                      const Text(
+                      Text(
                         "Barangay Timbao",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: globalSettings.selectedFont),
                       ),
                     ],
                   ),
@@ -192,7 +194,7 @@ class InformationLeftLogoRightSection extends StatelessWidget {
                 child: Icon(
                   icon,
                   size: size,
-                  color: Colors.blue
+                  color: globalSettings.themeColor
                 )
               ),
             ],
@@ -234,7 +236,7 @@ class InformationRightLogoLeftSection extends StatelessWidget {
                 child: Icon(
                   icon,
                   size: size,
-                  color: Colors.blue
+                  color: globalSettings.themeColor
                 )
               ),
               WordSubSection(
@@ -274,7 +276,7 @@ class WordSubSection extends StatelessWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
-          color: Colors.blueAccent,
+          color: globalSettings.themeColor,
           borderRadius: BorderRadius.horizontal(
             left: Radius.circular(leftside),
             right: Radius.circular(rightside)
@@ -308,7 +310,8 @@ class WordSubSection extends StatelessWidget {
                         header,
                         style: TextStyle(
                           fontSize: 20,
-                          color: Colors.white
+                          color: Colors.white,
+                          fontFamily: globalSettings.selectedFont
                         )
                       ),
                     ),
@@ -321,7 +324,12 @@ class WordSubSection extends StatelessWidget {
               ),
             Padding(
               padding: EdgeInsetsGeometry.only(top: 20, left: 10),
-              child: Text(information)
+              child: Text(
+                information,
+                style: TextStyle(
+                  fontFamily: globalSettings.selectedFont
+                )
+              )
             )
           ]
         )

@@ -6,6 +6,8 @@ import 'package:pwdapp/screens/Settings.dart';
 import 'screens/DisabilitiesTab.dart';
 import 'screens/MainScreen.dart';
 
+import 'utils/app_settings.dart';
+
 import 'screens/SeparateDisabilities/Cancer.dart';
 import 'screens/SeparateDisabilities/Chronic.dart';
 import 'screens/SeparateDisabilities/Communication.dart';
@@ -26,32 +28,37 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
-      initialRoute: '/MainScreen',
-      routes: {
-        '/DisabilitiesTab': (context) => const DisabilitiesTab(),
-        '/MainScreen': (context) => const MainScreen(),
-        '/Settings': (context) => const Settings(),
-        '/PWDTimbao': (context) => const AboutUsPage(),
-        '/PWDRights': (context) => const PwdRightsPage(),
-        '/GovernmentTab': (context) => const GovernmentTab(),
+    return ListenableBuilder(
+      listenable: globalSettings,
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+            useMaterial3: true,
+          ),
+          initialRoute: '/MainScreen',
+          routes: {
+            '/DisabilitiesTab': (context) => const DisabilitiesTab(),
+            '/MainScreen': (context) => const MainScreen(),
+            '/Settings': (context) => const Settings(),
+            '/PWDTimbao': (context) => const AboutUsPage(),
+            '/PWDRights': (context) => const PwdRightsPage(),
+            '/GovernmentTab': (context) => const GovernmentTab(),
 
-        '/CancerPage': (context) => const CancerPage(),
-        '/ChronicPage': (context) => const ChronicPage(),
-        '/CommunicationPage': (context) => const CommunicationPage(),
-        '/LearningPage': (context) => const LearningPage(),
-        '/MentalPage': (context) => const MentalPage(),
-        '/OrthopedicPage': (context) =>  const OrthopedicPage(),
-        '/PsychosocialPage': (context) => const PsychosocialPage(),
-        '/VisualPage': (context) => const VisualPage(),
-        '/SpeechLanguagePage': (context) => const SpeechLanguagePage()
-      },
+            '/CancerPage': (context) => const CancerPage(),
+            '/ChronicPage': (context) => const ChronicPage(),
+            '/CommunicationPage': (context) => const CommunicationPage(),
+            '/LearningPage': (context) => const LearningPage(),
+            '/MentalPage': (context) => const MentalPage(),
+            '/OrthopedicPage': (context) =>  const OrthopedicPage(),
+            '/PsychosocialPage': (context) => const PsychosocialPage(),
+            '/VisualPage': (context) => const VisualPage(),
+            '/SpeechLanguagePage': (context) => const SpeechLanguagePage()
+          },
+        );
+      }
     );
   }
 }
