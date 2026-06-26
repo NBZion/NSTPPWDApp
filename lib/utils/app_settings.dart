@@ -17,10 +17,10 @@ class AppSettings extends ChangeNotifier {
 
   double get iconSizeMultiplier {
     switch(selectedIconSize) {
-      case 'Medium': return 32.0;
-      case 'Large': return 40.0;
+      case 'Medium': return 18.0;
+      case 'Large': return 20.0;
       case 'Small':
-      default: return 24.0;
+      default: return 16.0;
     }
   }
 

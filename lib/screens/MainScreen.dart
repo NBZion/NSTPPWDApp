@@ -50,7 +50,10 @@ class MainScreenState extends State<MainScreen> {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.home_outlined),
+                            icon: Icon(
+                              Icons.home_outlined,
+                              size: globalSettings.iconSizeMultiplier + 5,
+                            ),
                             color: Colors.white,
                           ),
 
@@ -64,6 +67,7 @@ class MainScreenState extends State<MainScreen> {
                             icon: Icon(
                               Icons.settings_outlined,
                               color: Colors.white,
+                              size: globalSettings.iconSizeMultiplier + 5,
                             ),
                           ),
                         ],
@@ -283,7 +287,7 @@ class HomeOption extends StatelessWidget {
                   child: SizedBox(
                     width: 32,
                     height: 32,
-                    child: Icon(icon, color: Colors.white, size: 16),
+                    child: Icon(icon, color: Colors.white, size: globalSettings.iconSizeMultiplier),
                   ),
                 ),
               ),

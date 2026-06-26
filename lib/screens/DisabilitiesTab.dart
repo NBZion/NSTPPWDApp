@@ -52,7 +52,10 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
                             onPressed: () {
                               Navigator.pushReplacementNamed(context, '/MainScreen');
                             },
-                            icon: Icon(Icons.home_outlined),
+                            icon: Icon(
+                              Icons.home_outlined,
+                              size: globalSettings.iconSizeMultiplier + 5
+                            ),
                             color: Colors.white,
                           ),
 
@@ -63,6 +66,7 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
                             icon: Icon(
                               Icons.settings_outlined,
                               color: Colors.white,
+                              size: globalSettings.iconSizeMultiplier + 5
                             ),
                           ),
                         ],
@@ -171,7 +175,7 @@ class DisabilityCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(icon, size: 40, color: Colors.black),
+              Icon(icon, size: globalSettings.iconSizeMultiplier + 24, color: Colors.black),
               Text(
                 label,
                 textAlign: TextAlign.center,
