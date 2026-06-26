@@ -120,15 +120,15 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
             DisabilityCard(icon: Icons.accessible, label: "Orthopedic", route: '/OrthopedicPage'),
             DisabilityCard(icon: Icons.co_present, label: "Learning", route: '/LearningPage'),
             DisabilityCard(icon: Icons.visibility, label: "Visual", route: '/VisualPage'),
-            DisabilityCard(icon: Icons.assist_walker, label: "Physical", route: '/OrthopedicPage'),
-            DisabilityCard(icon: Icons.hearing, label: "Hearing", route: '/'),
+            DisabilityCard(icon: Icons.assist_walker, label: "Physical", route: '/'), // INFO MISSING
+            DisabilityCard(icon: Icons.hearing, label: "Hearing", route: '/'), // INFO MISSING
             DisabilityCard(icon: Icons.record_voice_over, label: "Speech", route: '/CommunicationPage'),
             DisabilityCard(icon: Icons.all_inclusive, label: "Cancer", route: '/CancerPage'),
             DisabilityCard(icon: Icons.psychology, label: "Mental", route: '/MentalPage'),
-            DisabilityCard(
+            DisabilityCard( // INFO MISSING
               icon: Icons.translate,
               label: "Speech and\nLanguage",
-              route: '/'
+              route: '/SpeechLanguage'
             ),
           ],
         ),

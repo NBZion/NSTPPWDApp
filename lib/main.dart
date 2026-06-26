@@ -14,6 +14,7 @@ import 'screens/SeparateDisabilities/Mental.dart';
 import 'screens/SeparateDisabilities/Orthopedic.dart';
 import 'screens/SeparateDisabilities/Psychosocial.dart';
 import 'screens/SeparateDisabilities/Visual.dart';
+import 'screens/SeparateDisabilities/SpeechLanguage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +49,8 @@ class MyApp extends StatelessWidget {
         '/MentalPage': (context) => const MentalPage(),
         '/OrthopedicPage': (context) =>  const OrthopedicPage(),
         '/PsychosocialPage': (context) => const PsychosocialPage(),
-        '/VisualPage': (context) => const VisualPage()
+        '/VisualPage': (context) => const VisualPage(),
+        '/SpeechLanguagePage': (context) => const SpeechLanguagePage()
       },
     );
   }

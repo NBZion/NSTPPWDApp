@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import '../SeparateDisability.dart';
 
-class SpeechLanguagePage extends StatefulWidget {
-  const SpeechLanguagePage({
+class HearingPage extends StatefulWidget {
+  const HearingPage({
     super.key
   });
 
   @override
-  SpeechLanguagePageState createState() => SpeechLanguagePageState();
+  HearingPageState createState() => HearingPageState();
 }
 
-class SpeechLanguagePageState extends State<SpeechLanguagePage> {
+class HearingPageState extends State<HearingPage> {
 
   @override
   Widget build(BuildContext context) {
     return SeparateDisabilityState(
       children: [
         InformationLeftLogoRightSection(
-          header: 'Speech',
+          header: 'Physical',
           information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
           iconpadding: 5,
           icon: Icons.people,
