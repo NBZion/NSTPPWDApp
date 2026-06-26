@@ -247,6 +247,10 @@ class _SettingsState extends State<Settings> {
     List<String> options,
     ValueChanged<String?> onChanged,
   ) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
+    final capsuleColor = isDarkMode ? Colors.grey[900] : Colors.white;
+    final contentColor = isDarkMode ? Colors.white : Colors.black;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -263,19 +267,20 @@ class _SettingsState extends State<Settings> {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           height: 28,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: capsuleColor, //Colors.white,
             borderRadius: BorderRadius.circular(15),
           ),
           child: DropdownButtonHideUnderline(
             child: DropdownButton<String>(
               value: currentValue,
-              icon: const Icon(
+              dropdownColor: capsuleColor,
+              icon: Icon(
                 Icons.keyboard_arrow_down,
-                color: Colors.black,
+                color: contentColor, //Colors.black,
                 size: 18,
               ),
-              style: const TextStyle(
-                color: Colors.black,
+              style: TextStyle(
+                color: contentColor, //Colors.black,
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
               ),
@@ -283,7 +288,12 @@ class _SettingsState extends State<Settings> {
               items: options.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value),
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: contentColor,
+                    ),
+                  ),
                 );
               }).toList(),
             ),
