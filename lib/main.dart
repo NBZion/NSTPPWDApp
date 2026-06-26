@@ -5,7 +5,15 @@ import 'package:pwdapp/screens/PWDTimbao.dart';
 import 'package:pwdapp/screens/Settings.dart';
 import 'screens/DisabilitiesTab.dart';
 import 'screens/MainScreen.dart';
-import 'screens/SeparateDisability.dart';
+
+import 'screens/SeparateDisabilities/Cancer.dart';
+import 'screens/SeparateDisabilities/Chronic.dart';
+import 'screens/SeparateDisabilities/Communication.dart';
+import 'screens/SeparateDisabilities/Learning.dart';
+import 'screens/SeparateDisabilities/Mental.dart';
+import 'screens/SeparateDisabilities/Orthopedic.dart';
+import 'screens/SeparateDisabilities/Psychosocial.dart';
+import 'screens/SeparateDisabilities/Visual.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,8 +39,16 @@ class MyApp extends StatelessWidget {
         '/Settings': (context) => const Settings(),
         '/PWDTimbao': (context) => const AboutUsPage(),
         '/PWDRights': (context) => const PwdRightsPage(),
-        '/SeparateDisability': (context) => const SeparateDisability(),
         '/GovernmentTab': (context) => const GovernmentTab(),
+
+        '/CancerPage': (context) => const CancerPage(),
+        '/ChronicPage': (context) => const ChronicPage(),
+        '/CommunicationPage': (context) => const CommunicationPage(),
+        '/LearningPage': (context) => const LearningPage(),
+        '/MentalPage': (context) => const MentalPage(),
+        '/OrthopedicPage': (context) =>  const OrthopedicPage(),
+        '/PsychosocialPage': (context) => const PsychosocialPage(),
+        '/VisualPage': (context) => const VisualPage()
       },
     );
   }

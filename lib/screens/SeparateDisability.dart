@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:pwdapp/utils/color_extensions.dart';
 
-class SeparateDisability extends StatefulWidget {
-  const SeparateDisability({super.key});
-  @override
-  SeparateDisabilityState createState() => SeparateDisabilityState();
-}
 
-class SeparateDisabilityState extends State<SeparateDisability> {
+class SeparateDisabilityState extends StatelessWidget {
+  
+  const SeparateDisabilityState({
+    super.key,
+    required this.children,
+  });
+
+  final List<Widget> children;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      // APP BAR
       appBar: AppBar(
         toolbarHeight: 150,
         flexibleSpace: Container(
@@ -107,13 +112,16 @@ class SeparateDisabilityState extends State<SeparateDisability> {
         ),
       ),
 
+      // BODY
       body: Padding (
         padding: const EdgeInsetsGeometry.only(top: 20, bottom: 20),
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: children,
+              /* FORMAT EXAMPLE
+              [
                 InformationLeftLogoRightSection(
                   header: 'Header 1',
                   information: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies elit turpis, id egestas mauris porttitor in.',
@@ -135,7 +143,7 @@ class SeparateDisabilityState extends State<SeparateDisability> {
                   size: 120,
                   paddingvalue: 40
                 )
-              ]
+              ]*/
             )
           )
         )

@@ -116,18 +116,19 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
           mainAxisSpacing: 15,
           childAspectRatio: 0.9,
           children: [
-            DisabilityCard(icon: Icons.forum_rounded, label: "Psychosocial"),
-            DisabilityCard(icon: Icons.accessible, label: "Orthopedic"),
-            DisabilityCard(icon: Icons.co_present, label: "Learning"),
-            DisabilityCard(icon: Icons.visibility, label: "Visual"),
-            DisabilityCard(icon: Icons.assist_walker, label: "Physical"),
-            DisabilityCard(icon: Icons.hearing, label: "Hearing"),
-            DisabilityCard(icon: Icons.record_voice_over, label: "Speech"),
-            DisabilityCard(icon: Icons.all_inclusive, label: "Cancer"),
-            DisabilityCard(icon: Icons.psychology, label: "Mental"),
+            DisabilityCard(icon: Icons.forum_rounded, label: "Psychosocial", route: '/PsychosocialPage'),
+            DisabilityCard(icon: Icons.accessible, label: "Orthopedic", route: '/OrthopedicPage'),
+            DisabilityCard(icon: Icons.co_present, label: "Learning", route: '/LearningPage'),
+            DisabilityCard(icon: Icons.visibility, label: "Visual", route: '/VisualPage'),
+            DisabilityCard(icon: Icons.assist_walker, label: "Physical", route: '/OrthopedicPage'),
+            DisabilityCard(icon: Icons.hearing, label: "Hearing", route: '/'),
+            DisabilityCard(icon: Icons.record_voice_over, label: "Speech", route: '/CommunicationPage'),
+            DisabilityCard(icon: Icons.all_inclusive, label: "Cancer", route: '/CancerPage'),
+            DisabilityCard(icon: Icons.psychology, label: "Mental", route: 'MentalPage'),
             DisabilityCard(
               icon: Icons.translate,
               label: "Speech and\nLanguage",
+              route: '/'
             ),
           ],
         ),
@@ -139,11 +140,14 @@ class DisabilitiesTabState extends State<DisabilitiesTab> {
 class DisabilityCard extends StatelessWidget {
   final IconData icon;
   final String label;
+  final String route;
+
   // Add Navigation Variable Here
   const DisabilityCard({
     super.key,
     required this.icon,
     required this.label,
+    required this.route
     /*, Add navigation here */
   });
 
@@ -155,7 +159,8 @@ class DisabilityCard extends StatelessWidget {
       child: InkWell(
         onTap: () {
           /* Navigation Logic */
-          print("Pressed");
+          //print("Pressed");
+          Navigator.pushReplacementNamed(context, route);
         },
         child: Container(
           width: 50,
