@@ -110,12 +110,9 @@ flutter_launcher_icons:
   ios: false
   windows:
     generate: true
-    image_path: "assets/images/appIcon.jpg"
+    image_path: "assets/images/appIcon.png"
     icon_size: 48
-  image_path: "assets/images/appIcon.jpg"
+  image_path: "assets/images/appIcon.png"
 
 flutter_native_splash:
-  image: assets/images/appLoadingIcon.jpg
-
-  android_12:
-    image: assets/images/appLoadingIcon.jpg
+  image: assets/images/appLoadingIcon.png
