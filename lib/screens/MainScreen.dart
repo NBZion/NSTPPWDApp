@@ -11,6 +11,9 @@ class MainScreen extends StatefulWidget {
 class MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       // Top Bar
       appBar: AppBar(
@@ -121,41 +124,163 @@ class MainScreenState extends State<MainScreen> {
 
       body: Padding(
         padding: const EdgeInsetsGeometry.all(20),
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final isSmallScreen = constraints.maxHeight < 700;
 
-        child: Column(
+            return SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              child: Column(
+                spacing: isSmallScreen ? 16 : 30,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Column(
+                    spacing: 10,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Flexible(
+                            child: DataDisplay(
+                              title: 'Registered PWDs',
+                              color: Colors.lightBlue,
+                              initdata: 320,
+                            )
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 20,
+                        children: [
+                          Flexible(
+                            child: DataDisplay(
+                              title: 'Caretakers',
+                              color: Colors.redAccent,
+                              initdata: 25,
+                            )
+                          ),
+                          Flexible(
+                            child: DataDisplay(
+                              title: 'Programs',
+                              color: Colors.greenAccent,
+                              initdata: 25,
+                            )
+                          ),
+                        ],
+                      )
+                    ]
+                  ),
+
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    spacing: isSmallScreen ? 20: 40,
+                    children: [
+                      // FIRST ROW
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: isSmallScreen ? 16 : 30,
+                        children: [
+                          Flexible(
+                            child: HomeOption(
+                              iconboxcolor: Colors.lightBlue,
+                              icon: Icons.accessibility,
+                              title: 'Learn About Disabilities',
+                              subtitle: 'Information about different distabilites',
+                              subtitlespace: 2,
+                              route: '/DisabilitiesTab',
+                            )
+                          ),
+                          Flexible(
+                            child: HomeOption(
+                              iconboxcolor: Colors.amber,
+                              icon: Icons.folder,
+                              title: 'Government Programs',
+                              subtitle:
+                                  'Access local and national programs for PWD citizens',
+                              subtitlespace: 2,
+                              route: '/GovernmentTab',
+                            )
+                          ),
+                        ]
+                      ),
+                      
+                      // SECOND ROW
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: isSmallScreen ? 16 : 30,
+                        children: [
+                          Flexible(
+                            child: HomeOption(
+                              iconboxcolor: Colors.greenAccent,
+                              icon: Icons.check,
+                              title: 'PWD Rights',
+                              subtitle:
+                                  'Learn about rights and legal protections for PWD citizens of the Philippines',
+                              subtitlespace: 12,
+                              route: '/PWDRights',
+                            )
+                          ),
+                          Flexible(
+                            child: HomeOption(
+                              iconboxcolor: Colors.pinkAccent,
+                              icon: Icons.house,
+                              title: 'Learn About PWD Timbao',
+                              subtitle: 'Information about PWD Timbao',
+                              subtitlespace: 2,
+                              route: '/PWDTimbao',
+                            )
+                          ),
+                        ],
+                      )
+                    ]
+                  )
+                ]
+              ),
+
+              
+            );
+          }
+        )
+        
+        
+        
+        /*child: Column(
           spacing: 30,
           children: [
             // DATA
-            Column(
-              spacing: 10,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    DataDisplay(
-                      title: 'Registered PWDs',
-                      color: Colors.lightBlue,
-                      initdata: 320,
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  spacing: 20,
-                  children: [
-                    DataDisplay(
-                      title: 'Caretakers',
-                      color: Colors.redAccent,
-                      initdata: 25,
-                    ),
-                    DataDisplay(
-                      title: 'Programs',
-                      color: Colors.greenAccent,
-                      initdata: 25,
-                    ),
-                  ],
-                ),
-              ],
+            SingleChildScrollView(
+              child: Column(
+                spacing: 10,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      DataDisplay(
+                        title: 'Registered PWDs',
+                        color: Colors.lightBlue,
+                        initdata: 320,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    spacing: 20,
+                    children: [
+                      DataDisplay(
+                        title: 'Caretakers',
+                        color: Colors.redAccent,
+                        initdata: 25,
+                      ),
+                      DataDisplay(
+                        title: 'Programs',
+                        color: Colors.greenAccent,
+                        initdata: 25,
+                      ),
+                    ],
+                  ),
+                ],
+              )
             ),
 
             // BUTTONS
@@ -219,7 +344,7 @@ class MainScreenState extends State<MainScreen> {
               ],
             ),
           ],
-        ),
+        ),*/
       ),
     );
   }
