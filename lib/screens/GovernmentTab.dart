@@ -122,6 +122,7 @@ class GovernmentTabState extends State<GovernmentTab> {
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
         child: Column(
+          spacing: 15,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
@@ -144,6 +145,50 @@ class GovernmentTabState extends State<GovernmentTab> {
                   "The Comprehensive Program for Persons with Disabilities aims to promote services to all types...",
               url: "https://www.dswd.gov.ph",
             ),
+            
+            Center(
+              child: Text(
+                "Government Organizations",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: globalSettings.selectedFont
+                )
+              )
+            ),
+
+            const SizedBox(height: 25),
+
+            _buildGovernmentProgramItem(
+              title: "National Council on Disability Affairs (NCDA)",
+              description:
+                  "The NCDA is the organization responsible for creating the guidelines for the policies created to elevate the rights of PWDs",
+              url: "https://www.ncda.gov.ph",
+            ),
+            _buildGovernmentProgramItem(
+              title: "Department of Social Welfare and Development (DSWD)",
+              description: 
+                  "The DSWD is responsible for giving out assistance and support to the vulnerable sectors and promote social welfare and well-being",
+              url: "https://www.dswd.gov.ph",
+            ),
+            _buildGovernmentProgramItem(
+              title: "Department of Health (DOH)",
+              description: 
+                  "The DOH is responsible for managing the healthcare of PWDs by ensuring access to specialize medical care including diagnosis and treatment",
+              url: "https://www.doh.gov.ph",
+            ),
+            _buildGovernmentProgramItem(
+              title: "Department of Education (DepEd)",
+              description: 
+                "The DepEdensures that PWDs have access to inclusive education and equal opportunities through different accessible facilities",
+              url: "https://www.deped.gov.ph",
+            ),
+            _buildGovernmentProgramItem(
+              title: "Public Employment Service Office (PESO)",
+              description:
+                "PESO facilitates job assistance and skills training to give opportunities for the disabled through connections with job seekers",
+              url: "https://www.philjobnet.gov.ph",
+            )
           ],
         ),
       ),

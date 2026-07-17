@@ -139,7 +139,7 @@ class AboutUsPage extends StatelessWidget {
                 // Text side that fills up the remaining width
                 Expanded(
                   child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id sem vitae velit facilisis elementum. Pellentesque commodo turpis sed magna fringilla semper. Aliquam libero purus, feugiat non suscipit ut.",
+                    "PWD Timbao is a non-profit organization recognized under the City Social Welfare and Development Office (CSWD) through the Persons with Disability Affairs Office (PDAO) of Biñan City, Laguna. ",
                     style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
                   ),
                 ),
@@ -149,17 +149,17 @@ class AboutUsPage extends StatelessWidget {
 
             // 3. Section: Lorem Ipsum Heading & Blocks
             const Text(
-              "Lorem Ipsum",
+              "Objectives",
               style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             Text(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id sem vitae velit facilisis elementum. Pellentesque commodo turpis sed magna fringilla semper. Aliquam libero purus, feugiat non suscipit ut.",
+              "With the support of the Local Government Unit (LGU) and the PWD Federation, the organization aims to implement inclusive and sustainable programs that ensure the PWDs have full and equal participation in the society through access to opportunities for livelihood, health, education and social empowerment",
               style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
             ),
             const SizedBox(height: 16),
             Text(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id sem vitae velit facilisis elementum. Pellentesque commodo turpis sed magna fringilla semper. Aliquam libero purus, feugiat non suscipit ut,",
+              "PWD Timbao provides a range of services and programs aimed at improving the welfare and quality of life of PWDs. These include processing PWD ID applications, assisting with PhilHealth registration, facilitating access to assistive devices through the PDAO and LGU, conducting livelihood training, referring clients for therapy and psychiatric assessments, and partnering with the Lasallian Mission Office in Biñan Laguna to support community programs.",
               style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
             ),
             const SizedBox(height: 30),
