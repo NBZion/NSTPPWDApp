@@ -133,7 +133,7 @@ class AboutUsPage extends StatelessWidget {
                     color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  child: Icon(Icons.image, size: 50, color: Colors.grey[400]),
+                  child: ImageSection(image: 'assets/images/TimbaoLogo.png'), //Icon(Icons.image, size: 50, color: Colors.grey[400]),
                 ),
                 const SizedBox(width: 16),
                 // Text side that fills up the remaining width
@@ -249,5 +249,16 @@ class AboutUsPage extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class ImageSection extends StatelessWidget {
+  const ImageSection({super.key, required this.image});
+
+  final String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(image, width: 25, height: 25, fit: BoxFit.cover);
   }
 }

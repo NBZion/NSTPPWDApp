@@ -11,8 +11,8 @@ class MainScreen extends StatefulWidget {
 class MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
+    //double screenWidth = MediaQuery.of(context).size.width;
+    //double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       // Top Bar
