@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:pwdapp/utils/color_extensions.dart';
 import 'package:pwdapp/utils/app_settings.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({super.key});
@@ -181,7 +182,7 @@ class AboutUsPage extends StatelessWidget {
               description:
                   "PWD Timbao participating in First Aid and Basic Life Saving Training with Lifeline in De La...",
               onTap: () {
-                // Handle link tap action
+                _openBrowserLink("https://www.facebook.com/share/r/1GR55zniN9/"); // Handle link tap action
               },
             ),
             const SizedBox(height: 25),
@@ -193,13 +194,22 @@ class AboutUsPage extends StatelessWidget {
               description:
                   "In honor of the 47th National Disability Rights Week, with the theme \"Innovation for Inclusi...",
               onTap: () {
-                // Handle link tap action
+                 _openBrowserLink("https://www.facebook.com/share/p/1GoKq5wXUY/");
               },
             ),
           ],
         ),
       ),
     );
+  }
+
+    Future<void> _openBrowserLink(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+
+    // LaunchMode.externalApplication forces it to open in Chrome/Safari instead of inside the app
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $urlString');
+    }
   }
 
   // Custom helper to quickly construct a Program Item Row

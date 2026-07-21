@@ -60,6 +60,7 @@ class _PwdRightsPageState extends State<PwdRightsPage> {
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       decoration: TextDecoration.underline,
+                      color: Colors.black,
                       height: 1.4,
                       fontFamily: globalSettings.selectedFont,
                     ),

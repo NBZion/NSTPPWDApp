@@ -163,7 +163,7 @@ class MainScreenState extends State<MainScreen> {
                           Flexible(
                             child: DataDisplay(
                               title: 'Programs',
-                              color: Colors.greenAccent,
+                              color: Colors.green,
                               initdata: 25,
                             )
                           ),
@@ -382,13 +382,6 @@ class HomeOption extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
         onPressed: () {
-          print("Button Pressed");
-          /*Navigator.push(
-            context,
-            MaterialPageRoute<void>(
-              builder: route
-            ),
-          )*/
           Navigator.pushReplacementNamed(context, route);
         },
         child: Padding(
@@ -426,7 +419,7 @@ class HomeOption extends StatelessWidget {
                     title,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                       fontFamily: globalSettings.selectedFont
                     ),
@@ -436,8 +429,8 @@ class HomeOption extends StatelessWidget {
                   Text(
                     subtitle,
                     style: TextStyle(
-                      color: Colors.grey, 
-                      fontSize: 8,
+                      color: Colors.black, 
+                      fontSize: 9,
                       fontFamily: globalSettings.selectedFont
                     ),
                   ),

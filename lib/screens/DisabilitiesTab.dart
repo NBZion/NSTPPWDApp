@@ -160,7 +160,6 @@ class DisabilityCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Material(
       color: Colors.transparent,
       child: InkWell(
@@ -181,7 +180,7 @@ class DisabilityCard extends StatelessWidget {
                 label,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
                   fontFamily: globalSettings.selectedFont

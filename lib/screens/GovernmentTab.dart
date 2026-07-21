@@ -143,12 +143,13 @@ class GovernmentTabState extends State<GovernmentTab> {
                   "The Comprehensive Program for Persons with Disabilities (DSWD)",
               description:
                   "The Comprehensive Program for Persons with Disabilities aims to promote services to all types...",
-              url: "https://www.dswd.gov.ph",
+              url: "https://fo1.dswd.gov.ph/wp-content/uploads/2013/07/Program-for-PWDs.pdf",
+              iconData: Icons.favorite,
             ),
             
             Center(
               child: Text(
-                "Government Organizations",
+                "Government Orgs",
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -164,30 +165,35 @@ class GovernmentTabState extends State<GovernmentTab> {
               description:
                   "The NCDA is the organization responsible for creating the guidelines for the policies created to elevate the rights of PWDs",
               url: "https://www.ncda.gov.ph",
+              iconData: Icons.health_and_safety,
             ),
             _buildGovernmentProgramItem(
               title: "Department of Social Welfare and Development (DSWD)",
               description: 
                   "The DSWD is responsible for giving out assistance and support to the vulnerable sectors and promote social welfare and well-being",
-              url: "https://www.dswd.gov.ph",
+              url: "https://www.dswd.gov.ph/programs-services/#",
+              iconData: Icons.accessibility_new,
             ),
             _buildGovernmentProgramItem(
               title: "Department of Health (DOH)",
               description: 
                   "The DOH is responsible for managing the healthcare of PWDs by ensuring access to specialize medical care including diagnosis and treatment",
-              url: "https://www.doh.gov.ph",
+              url: "https://pwd.doh.gov.ph/home.php",
+              iconData: Icons.health_and_safety_sharp,
             ),
             _buildGovernmentProgramItem(
               title: "Department of Education (DepEd)",
               description: 
                 "The DepEdensures that PWDs have access to inclusive education and equal opportunities through different accessible facilities",
               url: "https://www.deped.gov.ph",
+              iconData: Icons.school,
             ),
             _buildGovernmentProgramItem(
               title: "Public Employment Service Office (PESO)",
               description:
                 "PESO facilitates job assistance and skills training to give opportunities for the disabled through connections with job seekers",
-              url: "https://www.philjobnet.gov.ph",
+              url: "https://dole.gov.ph/public-employment-services-pes-contents/",
+              iconData: Icons.work,
             )
           ],
         ),
@@ -208,6 +214,7 @@ class GovernmentTabState extends State<GovernmentTab> {
     required String title,
     required String description,
     required String url,
+    required IconData iconData,
   }) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -252,8 +259,8 @@ class GovernmentTabState extends State<GovernmentTab> {
             color: globalSettings.themeColor, //const Color(0xFF0088FF),
             borderRadius: BorderRadius.circular(8),
           ),
-          child: const Center(
-            child: Icon(Icons.favorite, color: Colors.red, size: 35),
+          child: Center(
+            child: Icon(iconData, color: Colors.white, size: 35),
           ),
         ),
       ],
