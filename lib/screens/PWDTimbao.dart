@@ -176,7 +176,7 @@ class AboutUsPage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              "The organization has a history of dedicated leadership that has contributed to its growth and success. The first president of PWD Timbao was Miss Wilma Bandillon, who served in the position from July 2014 to March 2016. Succeeding Miss Bandillon was Miss Liza Decena, who served as president from 2016 to 2024. The last president to be appointed as of 2026, succeeding Miss Liza Decena, was Mister Amador Rempillo, who served in the position from 2024 to 2026.",
+              "The organization has a history of dedicated leadership that has contributed to its growth and success. The founder of PWD Timbao was Miss Wilma Bandillon, who served as the first president from July 2014 to March 2016. Succeeding Miss Bandillon was Miss Liza Decena, who served as president from 2016 to 2024. The last president to be appointed as of 2026, succeeding Miss Liza Decena, was Mister Amador Rempillo, who served in the position from 2024 to 2026.",
               style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
             ),
             const SizedBox(height: 16),
