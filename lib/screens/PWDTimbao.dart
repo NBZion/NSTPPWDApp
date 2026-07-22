@@ -165,6 +165,27 @@ class AboutUsPage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
 
+            const Text(
+              "Background",
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              "The organization is led by four officers who oversee the organization's programs, activities, and services. Currently acting as president is Miss Mercedes Acuña, who is also the Vice President of the organization. She leads the organization together with coordinators Miss Nora Forteza and Miss Josefa Altobar.",
+              style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              "The organization has a history of dedicated leadership that has contributed to its growth and success. The first president of PWD Timbao was Miss Wilma Bandillon, who served in the position from July 2014 to March 2016. Succeeding Miss Bandillon was Miss Liza Decena, who served as president from 2016 to 2024. The last president to be appointed as of 2026, succeeding Miss Liza Decena, was Mister Amador Rempillo, who served in the position from 2024 to 2026.",
+              style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              "Since then, the organization does not have an officially appointed president, with the current Vice President Miss Mercedes Acuña serving as the acting president. The organization continues to operate under the guidance of its officers and coordinators, ensuring that the needs of the PWD community in Barangay Timbao are met through various programs and initiatives.",
+              style: TextStyle(fontSize: 14, height: 1.4, fontFamily: globalSettings.selectedFont),
+            ),
+            const SizedBox(height: 30),
+
             // 4. Section: Programs Title
             Center(
               child: Text(
